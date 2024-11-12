@@ -21,7 +21,7 @@ function login() {
     const password = document.getElementById('loginPassword').value;
     // This is where the login logic can be implemented
     alert(`Login in: ${username}`);
-    document.getElementById('shoppingLink').style.display = 'block'; // 登录后显示购物链接
+    document.getElementById('shoppingLink').style.display = 'block'; // After logging in, the shopping link is displayed
 }
 
 function addToCart(courseName, price, quantity) {
@@ -53,13 +53,13 @@ function checkout() {
         alert("The cart is empty!");
     } else {
         alert("Checkout successful! total: $" + totalPrice.toFixed(2));
-        cart = []; // 清空购物车
+        cart = []; // Empty your shopping cart
         totalPrice = 0;
-        updateCart(); // 更新购物车显示
+        updateCart(); // Update the cart display
     }
 }
 function submitContactForm(event) {
-    event.preventDefault(); // 防止表单提交导致页面刷新
+    event.preventDefault(); // Prevent form submissions from causing page refreshes
 
     const name = document.getElementById('contactName').value;
     const email = document.getElementById('contactEmail').value;
