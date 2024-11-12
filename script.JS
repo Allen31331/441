@@ -12,14 +12,14 @@ function showPage(pageId) {
 function createUser() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    // 这里可以实现用户创建逻辑
+    // This is where the user creation logic can be implemented
     alert(`Create a new user: ${username}`);
 }
 
 function login() {
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
-    // 这里可以实现登录逻辑
+    // This is where the login logic can be implemented
     alert(`Login in: ${username}`);
     document.getElementById('shoppingLink').style.display = 'block'; // 登录后显示购物链接
 }
@@ -32,7 +32,7 @@ function addToCart(courseName, price, quantity) {
         totalPrice += price * qty;
         updateCart();
     } else {
-        alert("请输入有效的数量");
+        alert("Please enter a valid quantity");
     }
 }
 
@@ -65,11 +65,11 @@ function submitContactForm(event) {
     const email = document.getElementById('contactEmail').value;
     const message = document.getElementById('contactMessage').value;
 
-    // 这里可以添加处理表单数据的逻辑，例如发送到服务器
-    // 目前仅用 alert 显示消息
+    // Here you can add logic to process the form data, e.g. send to the server
+    // Currently, only alerts are used to display messages
     alert(`Thanks you message, ${name}! we will reply early。`);
 
-    // 清空表单
+    // Clear the form
     document.getElementById('contactForm').reset();
     document.getElementById('contactResponse').textContent = "your message send successful";
     document.getElementById('contactResponse').style.display = "block";
