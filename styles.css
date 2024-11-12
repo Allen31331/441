@@ -1,0 +1,74 @@
+/* BY Allen*/
+:root {
+    --primary-color: #04101e; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --white: #fff;
+    --black: #000;
+}
+
+/* Style code, using theme colors */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
+.page {
+    display: none;
+    padding: 20px;
+    border: 1px solid var(--secondary-color);
+    margin: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product, .cart {
+    width: calc(33% - 20px);
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+.cart {
+    width: 100%;
+    margin-top: 20px;
+}
+.cart-item {
+    margin-bottom: 5px;
+}
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: var(--white);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+button {
+    background-color: var}
