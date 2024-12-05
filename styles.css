@@ -72,3 +72,29 @@ footer {
 }
 button {
     background-color: var}
+    nav {
+        text-align: center;
+    }
+    
+    nav ul {
+        display: inline-block;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav li {
+        text-align: center;
+    }
+   
+   
+    .logo img {
+        max-width: 100px; 
+        height: auto; 
+    }.logo {
+        position: absolute; 
+        top: 0; 
+        left: 0;
+    }
+    <p style="text-align: center;">Welcome to Sunny School</p>
