@@ -1,13 +1,22 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunny School</title>
+    <title>Welcome to Sunny School</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Sunny School Logo">
+        </div>
         <h1>Welcome to Sunny School</h1>
         <nav>
             <ul>
@@ -40,21 +49,21 @@
         <h3>IT Courses</h3>
         <div class="container">
             <div class="product">
-                <h4>Course 1: Advanced Python Programming</h4>
+                <h4>441Course 1: Advanced Python Programming</h4>
                 <p>Price: $120</p>
                 <p>Description: Dive deeper into Python with advanced concepts and real-world applications.</p>
                 <input type="number" id="courseQuantity1" placeholder="Quantity">
                 <button onclick="addToCart('Advanced Python Programming', 120, document.getElementById('courseQuantity1').value)">Enroll</button>
             </div>
             <div class="product">
-                <h4>Course 2: Full Stack Web Development</h4>
+                <h4>441Course 2: Full Stack Web Development</h4>
                 <p>Price: $180</p>
                 <p>Description: Build dynamic websites and applications using modern web technologies.</p>
                 <input type="number" id="courseQuantity2" placeholder="Quantity">
                 <button onclick="addToCart('Full Stack Web Development', 180, document.getElementById('courseQuantity2').value)">Enroll</button>
             </div>
             <div class="product">
-                <h4>Course 3: Data Science and Machine Learning</h4>
+                <h4>441Course 3: Data Science and Machine Learning</h4>
                 <p>Price: $250</p>
                 <p>Description: Learn data analysis and machine learning techniques using Python.</p>
                 <input type="number" id="courseQuantity3" placeholder="Quantity">
@@ -65,21 +74,21 @@
         <h3>Training Resource Kits</h3>
         <div class="container">
             <div class="product">
-                <h4>Resource Kit 1: Python Data Analysis</h4>
+                <h4>441Resource Kit 1: Python Data Analysis</h4>
                 <p>Price: $15.00</p>
                 <p>Description: Essential resources for data analysis using Python.</p>
                 <input type="number" id="resourceQuantity1" placeholder="Quantity">
                 <button onclick="addToCart('Python Data Analysis', 15, document.getElementById('resourceQuantity1').value)">Add to Cart</button>
             </div>
             <div class="product">
-                <h4>Resource Kit 2: Front-End Development Tools</h4>
+                <h4>441Resource Kit 2: Front-End Development Tools</h4>
                 <p>Price: $25.00</p>
                 <p>Description: Tools and materials for effective front-end development.</p>
                 <input type="number" id="resourceQuantity2" placeholder="Quantity">
                 <button onclick="addToCart('Front-End Development Tools', 25, document.getElementById('resourceQuantity2').value)">Add to Cart</button>
             </div>
             <div class="product">
-                <h4>Resource Kit 3: Data Visualization Essentials</h4>
+                <h4>441Resource Kit 3: Data Visualization Essentials</h4>
                 <p>Price: $35.00</p>
                 <p>Description: Comprehensive resources for data visualization techniques.</p>
                 <input type="number" id="resourceQuantity3" placeholder="Quantity">
