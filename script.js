@@ -1,6 +1,11 @@
 /* BY Allen*/
 let cart = [];
 let totalPrice = 0;
+let isLoggedIn = false;
+let loginAttempts = 0;
+const maxLoginAttempts = 3;
+let createdUsername = "";
+let createdPassword = "";
 
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
@@ -13,19 +18,35 @@ function showPage(pageId) {
 function createUser() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    // This is where the user creation logic can be implemented
+    createdUsername = username;
+    createdPassword = password;
     alert(`Create a new user: ${username}`);
 }
 
 function login() {
+    if (loginAttempts >= maxLoginAttempts) {
+        alert("You have exceeded the maximum login attempts. Please try again later.");
+        return;
+    }
+
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
-    // This is where the login logic can be implemented
-    alert(`Login in: ${username}`);
-    document.getElementById('shoppingLink').style.display = 'block'; // After logging in, the shopping link is displayed
+    if (username === createdUsername && password === createdPassword) {
+        isLoggedIn = true;
+        alert(`Login in: ${username}`);
+        document.getElementById('shoppingLink').style.display = 'block'; // After logging in, the shopping link is displayed
+    } else {
+        alert("Invalid username or password. Please try again.");
+        loginAttempts++;
+    }
 }
 
 function addToCart(courseName, price, quantity) {
+    if (!isLoggedIn) {
+        alert("Please login to add items to the cart.");
+        return;
+    }
+
     const qty = parseInt(quantity);
     if (qty > 0) {
         const item = { name: courseName, price: price, quantity: qty };
@@ -50,6 +71,11 @@ function updateCart() {
 }
 
 function checkout() {
+    if (!isLoggedIn) {
+        alert("Please login to checkout.");
+        return;
+    }
+
     if (cart.length === 0) {
         alert("The cart is empty!");
     } else {
@@ -59,6 +85,7 @@ function checkout() {
         updateCart(); // Update the cart display
     }
 }
+
 function submitContactForm(event) {
     event.preventDefault(); // Prevent form submissions from causing page refreshes
 
